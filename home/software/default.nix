@@ -13,6 +13,7 @@
     # messaging
     telegram-desktop
     vesktop
+    discord
 
     # misc
     pciutils

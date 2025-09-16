@@ -1,5 +1,5 @@
 {
-  description = "LinuDev Configuration NixOs.";
+  description = "Yogansh Configuration NixOs.";
 
   outputs = inputs:
     inputs.flake-parts.lib.mkFlake {inherit inputs;} {
@@ -60,6 +60,13 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    kixvim = {
+      url = "github:YoganshSharma/kixvim";
+      # inputs.nixpkgs.follows = "nixpkgs"; #refer last para of https://nix.dev/manual/nix/2.24/command-ref/new-cli/nix3-flake.html#flake-inputs and https://github.com/YoganshSharma/kixvim/blob/ab853ff47eb3c9608bdb272340da47943eaa4184/README.md#snowflake-nixos-with-flakes using overlays instead of this
+
+    };
+
+
 
     mynixpkgs.url = "github:linuxmobile/mynixpkgs";
 
@@ -67,6 +74,15 @@
       url = "github:sodiboo/niri-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nur = {
+      url = "github:nix-community/NUR";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+
+
+
 
     nix-index-db = {
       url = "github:Mic92/nix-index-database";
@@ -85,6 +101,8 @@
       url = "git+https://git.outfoxxed.me/quickshell/quickshell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    sessionizer.url = "github:YoganshSharma/tmux-sessionizer";
 
     stylix = {
       url = "github:danth/stylix";

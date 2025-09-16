@@ -7,10 +7,11 @@
   programs.git = {
     enable = true;
     lfs.enable = true;
-    userName = "Braian A. Diez";
-    userEmail = "bdiez19@gmail.com";
+    userEmail = "yogansh@yogansh.tech";
+    userName = "Yogansh Sharma";
+
     signing = {
-      key = "481EFFCF2C7B8C7B";
+      # key = "481EFFCF2C7B8C7B"; # TODO: Add your GPG key ID here
       signByDefault = true;
     };
 
@@ -75,6 +76,54 @@
       llog = ''
         log --graph --name-status --pretty=format:"%C(red)%h %C(reset)(%cd) %C(green)%an %Creset%s %C(yellow)%d%Creset" --date=relative'';
       edit-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; hx `f`";
+            clone-worktree = "!sh ${pkgs.writeScriptBin "cloneWorktree" (builtins.readFile ./bin/git_clone_worktree.sh)}/bin/cloneWorktree";
+
+      remote-to-ghssh = ''
+        !${
+          pkgs.writeShellApplication {
+            name = "gitRemoteSshUpdate";
+            runtimeInputs = [
+              pkgs.git
+              pkgs.gnused
+            ];
+            text = ''
+              #!/bin/sh
+              remote="''${1:-origin}"
+              url="$(git remote get-url "$remote" 2>/dev/null)" || { echo "Remote '$remote' not found"; exit 1; }
+              ssh_url="$(echo "$url" | sed -E 's,^https://([^/]*)/(.*)$,git@\1:\2,')"
+              git remote set-url "$remote" "$ssh_url"
+              echo "Updated remote '$remote' to $ssh_url"
+            '';
+          }
+        }/bin/gitRemoteSshUpdate
+      '';
+      gitignore = ''
+        !${
+          pkgs.writeShellApplication {
+            name = "gitignore";
+            runtimeInputs = [
+              pkgs.curl
+              pkgs.fzf
+              pkgs.gnused
+            ];
+            text = ''
+              #!/bin/sh
+              if [ $# -gt 0 ]; then
+                curl -sL "https://www.gitignore.io/api/$*"
+                exit
+              fi
+
+              choices=$(curl -sL https://www.gitignore.io/api/list | tr ',' '\n')
+              selected=$(printf "%s\n" "$choices" | fzf --multi --preview "curl -sL https://www.gitignore.io/api/{}")
+
+              if [ -n "$selected" ]; then
+                curl -sL "https://www.gitignore.io/api/$(echo "$selected" | tr '\n' ',')"
+              fi
+            '';
+          }
+        }/bin/gitignore
+      '';
+
     };
 
     ignores = ["*~" "*.swp" "*result*" ".direnv" "node_modules"];

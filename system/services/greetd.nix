@@ -3,7 +3,7 @@
   services.greetd = let
     session = {
       command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd niri-session";
-      user = "linuxmobile";
+      user = "yogansh";
     };
   in {
     enable = true;

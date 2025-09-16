@@ -24,12 +24,17 @@
       killall
       jq
       ps_mem
+      dua # dust with tui
+      xh # curl oxidized
+      dysk
 
+      zk
+      tesseract
       discordo
       fum
       glow
       gtt
-      meteor-git
+      meteor-git # to write customizable commits
       reddit-tui
       scope-tui
       tuicam

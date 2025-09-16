@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  users.users.linuxmobile = {
+  users.users.yogansh = {
     isNormalUser = true;
     shell = pkgs.nushell;
     extraGroups = [

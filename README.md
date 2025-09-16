@@ -42,7 +42,7 @@
 - **Panel** • [Astal](https://aylur.github.io/astal/) 🍧 Astal GTK-shell :3!
 - **Notify Daemon** • [Dunst](https://github.com/dunst-project/dunst) 🍃
   Minimalist and functional!
-- **Launcher** • [AnyRun](https://github.com/Kirottu/anyrun) 🚀 Fast AnyRunner!
+- **Launcher** • [AnyRun](https://github.com/anyrun-org/anyrun) 🚀 Fast AnyRunner!
 - **File Manager** • [Yazi](https://github.com/sxyazi/yazi) 🔖 Rustacean File
   Manager!
 - **GUI Basic-IDE** • [Helix](https://docs.helix-editor.com/) ✴️ Rustacean vim

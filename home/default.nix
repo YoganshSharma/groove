@@ -10,8 +10,8 @@
     inputs.stylix.homeModules.stylix
   ];
   home = {
-    username = "linuxmobile";
-    homeDirectory = "/home/linuxmobile";
+    username = "yogansh";
+    homeDirectory = "/home/yogansh";
     stateVersion = "24.05";
   };
 

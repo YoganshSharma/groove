@@ -161,13 +161,12 @@
         q = "exit";
         cleanram = "sudo sh -c 'sync; echo 3 > /proc/sys/vm/drop_caches'";
         trimall = "sudo fstrim -va";
-        temp = "cd /tmp/";
         zed = "zeditor";
-        koji = "meteor";
         gitui = "lazygit";
+        v = "nvim";
 
-        test-build = "sudo nixos-rebuild test --flake .#aesthetic";
-        switch-build = "sudo nixos-rebuild switch --flake .#aesthetic";
+        test-build = "sudo nixos-rebuild test --flake .#thinkpad";
+        switch-build = "sudo nixos-rebuild switch --flake .#thinkpad";
 
         # git
         g = "git";
@@ -175,7 +174,7 @@
         commit = "git commit";
         push = "git push";
         pull = "git pull";
-        diff = "git diff --staged";
+        gdiff = "git diff --staged";
         gcld = "git clone --depth 1";
         gco = "git checkout";
         gitgrep = "git ls-files | rg";
