@@ -1,9 +1,12 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  inputs,
+  config,
+  ...
+}: {
   imports = [
     ./anyrun
-    ./browsers/chromium.nix
-    ./browsers/edge.nix
-    # ./browsers/qutebrowser.nix
+    #./browsers/chromium.nix
     ./browsers/zen.nix
     ./gtk.nix
     ./media
@@ -43,7 +46,7 @@
     resources
 
     inkscape
-    # gimp
+    firefox
     # krita
     scrcpy
     multiviewer-for-f1
@@ -51,5 +54,8 @@
     swww
     ghostty
     mods
+
+    inputs.kixvim.packages.${system}.default
+    inputs.sessionizer.packages.${system}.default
   ];
 }

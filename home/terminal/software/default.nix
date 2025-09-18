@@ -9,6 +9,9 @@
     ./lazygit.nix
     ./nix.nix
     ./skim.nix
+    ./tmux.nix
+    ./yt-dlp.nix
+    ./newsboat.nix
     # ./transient-services.nix
     ./xdg.nix
     ./yazi
