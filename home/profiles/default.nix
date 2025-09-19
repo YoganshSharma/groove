@@ -21,7 +21,7 @@ in {
 
   flake = {
     homeConfiguration = {
-      "yogansh_thinkpad" = homeManagerConfiguration {
+      "yogansh@thinkpad" = homeManagerConfiguration {
         modules = homeImports."yogansh@thinkpad";
         inherit pkgs extraSpecialArgs;
       };

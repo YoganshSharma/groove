@@ -7,6 +7,7 @@
   imports = [
     ./terminal
     inputs.nix-index-db.homeModules.nix-index
+    inputs.dankMaterialShell.homeModules.dankMaterialShell
     inputs.stylix.homeModules.stylix
   ];
   home = {
@@ -65,6 +66,11 @@
       starship.enable = true;
       vesktop.enable = true;
       yazi.enable = true;
+      fish.enable = true;
+      qt.enable = true;
     };
+  };
+  home.file.".face" = {
+    source = ./users/yogansh.png;
   };
 }

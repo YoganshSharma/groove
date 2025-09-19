@@ -27,6 +27,7 @@
       dua # dust with tui
       xh # curl oxidized
       dysk
+      tealdeer
 
       zk
       tesseract

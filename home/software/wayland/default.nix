@@ -3,7 +3,8 @@
 {
   imports = [
     ./niri
-    # ./hyprlock.nix
+    ./hyprlock.nix
+    ./dank_material_shell
   ];
 
   home.packages = with pkgs; [

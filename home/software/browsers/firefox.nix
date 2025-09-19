@@ -4,7 +4,7 @@
   ...
 }: {
   programs.firefox = {
-    enable = true;
+    enable = false;
     package = pkgs.wrapFirefox pkgs.firefox-devedition-unwrapped {
       extraPolicies = {
         DisableFirefoxStudies = true;

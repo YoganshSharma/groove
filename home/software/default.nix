@@ -10,6 +10,7 @@
     ./browsers/zen.nix
     ./gtk.nix
     ./media
+    ./documents
   ];
 
   home.packages = with pkgs; [

@@ -1,4 +1,5 @@
 {
+  lib,
   config,
   pkgs,
   ...
@@ -14,31 +15,44 @@ in {
     settings = {
       environment = {
         CLUTTER_BACKEND = "wayland";
-        DISPLAY = null;
+        # DISPLAY = null;
+        DISPLAY = ":0";
         GDK_BACKEND = "wayland,x11";
         MOZ_ENABLE_WAYLAND = "1";
         NIXOS_OZONE_WL = "1";
         QT_QPA_PLATFORM = "wayland;xcb";
         QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
         SDL_VIDEODRIVER = "wayland";
+
+        QT_QPA_PLATFORMTHEME = "gtk3";
+        QT_QPA_PLATFORMTHEME_QT6 = "gtk3";
+
       };
       spawn-at-startup = [
         (makeCommand "hyprlock")
         (makeCommand "swww-daemon")
-        {command = ["wl-paste" "--watch" "cliphist" "store"];}
-        {command = ["wl-paste" "--type text" "--watch" "cliphist" "store"];}
-        {command = ["qs" "-c" "DankMaterialShell"];}
+        {command = ["${pkgs.wl-clipboard}/bin/wl-paste" "--watch" "cliphist" "store"];}
+        {command = ["${pkgs.wl-clipboard}/bin/wl-paste" "--type text" "--watch" "cliphist" "store"];}
+
+        # {command = ["qs" "-c" "DankMaterialShell"];}
+        {command = [(lib.getExe pkgs.xwayland-satellite)];}
+
       ];
       input = {
-        keyboard.xkb.layout = "latam";
+        keyboard.xkb.layout = "us";
 
         touchpad = {
           click-method = "button-areas";
           dwt = true;
           dwtp = true;
-          natural-scroll = true;
+          natural-scroll = false;
           scroll-method = "two-finger";
           tap = true;
+          # tap =
+          #   if name == "macbook"
+          #   then false
+          #   else true;
+
           tap-button-map = "left-right-middle";
           middle-emulation = true;
           accel-profile = "adaptive";

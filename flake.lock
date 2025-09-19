@@ -137,6 +137,31 @@
         "type": "github"
       }
     },
+    "dankMaterialShell": {
+      "inputs": {
+        "dgop": "dgop",
+        "dms-cli": "dms-cli",
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "quickshell": [
+          "quickshell"
+        ]
+      },
+      "locked": {
+        "lastModified": 1758253052,
+        "narHash": "sha256-lNqkWCA1Pc0UaczqstOyIbkZgZu8ry+DeZdLLuYxXho=",
+        "owner": "AvengeMedia",
+        "repo": "DankMaterialShell",
+        "rev": "542536455b8e3c617a03f05b201b64369bc8091b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "AvengeMedia",
+        "repo": "DankMaterialShell",
+        "type": "github"
+      }
+    },
     "darwin": {
       "inputs": {
         "nixpkgs": [
@@ -156,6 +181,48 @@
         "owner": "lnl7",
         "ref": "master",
         "repo": "nix-darwin",
+        "type": "github"
+      }
+    },
+    "dgop": {
+      "inputs": {
+        "nixpkgs": [
+          "dankMaterialShell",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1757252286,
+        "narHash": "sha256-QwWQzlxAGvIi6VAc8DQ6ONCKKwtPyaHQW1cQyGbP7Og=",
+        "owner": "AvengeMedia",
+        "repo": "dgop",
+        "rev": "a65a02ddf8bade9c109d055e644e4bd851183bd5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "AvengeMedia",
+        "repo": "dgop",
+        "type": "github"
+      }
+    },
+    "dms-cli": {
+      "inputs": {
+        "nixpkgs": [
+          "dankMaterialShell",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1757296630,
+        "narHash": "sha256-3H236F5oIKkqpfnwrvZQs4Y5imKb6JCMFGDkHs8VDjQ=",
+        "owner": "AvengeMedia",
+        "repo": "danklinux",
+        "rev": "dac591711ab30d6b071a5cec674a3d2e04665ee1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "AvengeMedia",
+        "repo": "danklinux",
         "type": "github"
       }
     },
@@ -1069,6 +1136,7 @@
         "agenix": "agenix",
         "anyrun": "anyrun",
         "chaotic": "chaotic",
+        "dankMaterialShell": "dankMaterialShell",
         "flake-compat": "flake-compat",
         "flake-parts": "flake-parts_2",
         "flake-utils": "flake-utils",
@@ -1082,6 +1150,7 @@
         "nur": "nur",
         "quickshell": "quickshell",
         "sessionizer": "sessionizer",
+        "silentSDDM": "silentSDDM",
         "stylix": "stylix",
         "systems": "systems_5",
         "zen-browser": "zen-browser"
@@ -1123,6 +1192,26 @@
       "original": {
         "owner": "YoganshSharma",
         "repo": "tmux-sessionizer",
+        "type": "github"
+      }
+    },
+    "silentSDDM": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1756614994,
+        "narHash": "sha256-R0rvblJstTgwKxNqJQJaXN9fgksXFjPH5BYVMXdLsbU=",
+        "owner": "uiriansan",
+        "repo": "SilentSDDM",
+        "rev": "44c39db1c38ce0ab94025e656aec67fa4beedc24",
+        "type": "github"
+      },
+      "original": {
+        "owner": "uiriansan",
+        "repo": "SilentSDDM",
         "type": "github"
       }
     },
