@@ -68,6 +68,7 @@
       yazi.enable = true;
       fish.enable = true;
       qt.enable = true;
+      fcitx5.enable = true;
     };
   };
   home.file.".face" = {

@@ -9,7 +9,7 @@
 in {
 
   programs.niri.settings.binds = with config.lib.niri.actions; let
-    quickshellIpc = spawn (lib.getExe quickshell) "-c" "dms" "ipc" "call";
+    quickshellIpc = spawn "dms" "ipc";
     playerctl = spawn "${pkgs.playerctl}/bin/playerctl";
   in {
     "XF86AudioPlay".action = playerctl "play-pause";
@@ -42,7 +42,7 @@ in {
 
     "XF86MonBrightnessDown" = {
       allow-when-locked = true;
-      action = quickshellIpc "brightness" "decrement" "5" "amdgpu_bl1" ;
+      action = quickshellIpc "brightness" "decrement" "5" "" ;
     };
 
     "Ctrl+Alt+L".action = quickshellIpc "lock" "lock" ;
@@ -53,13 +53,17 @@ in {
     "Print".action.screenshot-screen = {write-to-disk = true;};
     "Mod+Shift+Alt+S".action = screenshot-window;
     "Mod+Shift+S".action.screenshot = {show-pointer = false;};
-    "Mod+D".action = spawn "${pkgs.anyrun}/bin/anyrun";
+    "Mod+D".action = quickshellIpc "spotlight" "toggle" ;
     "Mod+Return".action = spawn "${pkgs.ghostty}/bin/ghostty";
 
     "Mod+Q".action = close-window;
     "Mod+S".action = switch-preset-column-width;
     "Mod+F".action = maximize-column;
 
+    "Mod+O" = {
+      action = toggle-overview;
+      repeat = false;
+    };
     "Mod+Shift+F".action = expand-column-to-available-width;
     "Mod+1".action = focus-workspace 1;
     "Mod+2".action = focus-workspace 2;
@@ -110,5 +114,6 @@ in {
 
     "Mod+Shift+Ctrl+J".action = move-column-to-monitor-down;
     "Mod+Shift+Ctrl+K".action = move-column-to-monitor-up;
+    "Mod+Shift+Slash".action = show-hotkey-overlay;
   };
 }

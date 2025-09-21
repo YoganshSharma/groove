@@ -1,0 +1,3 @@
+{
+  serices.activitywatch.enable = true;
+}

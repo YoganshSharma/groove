@@ -8,7 +8,7 @@ in {
   programs.dankMaterialShell = {
     enable = true;
     enableSpawn = true;
-    enableCalendarEvents = false;
+    enableCalendarEvents = true;
 
     quickshell.package = quickshell;
   };

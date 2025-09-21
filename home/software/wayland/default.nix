@@ -3,7 +3,7 @@
 {
   imports = [
     ./niri
-    ./hyprlock.nix
+    # ./hyprlock.nix
     ./dank_material_shell
   ];
 
@@ -21,5 +21,8 @@
     QT_QPA_PLATFORM = "wayland";
     SDL_VIDEODRIVER = "wayland";
     XDG_SESSION_TYPE = "wayland";
+    # GTK_IM_MODULE = "fcitx";
+    # QT_IM_MODULE = "fcitx";
+    # XMODIFIERS ="@im=fcitx";
   };
 }

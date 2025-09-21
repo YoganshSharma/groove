@@ -5,7 +5,6 @@
   ...
 }: {
   imports = [
-    ./anyrun
     #./browsers/chromium.nix
     ./browsers/zen.nix
     ./gtk.nix

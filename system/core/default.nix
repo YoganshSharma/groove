@@ -1,4 +1,8 @@
-{lib, ...}: {
+{
+lib,
+pkgs,
+...
+}: {
   imports = [
     ./security.nix
     ./users.nix
@@ -20,13 +24,17 @@
       LC_TIME = "en_IN";
     };
   };
-  i18n.inputMethod = {
-    enable = true;
-    type = "fcitx5";
-    fcitx5 = {
-      waylandFrontend = true;
-    };
-  };
+
+  # # TODO enable this if niri keyboard starts working
+  # i18n.inputMethod = {
+  #   enable = true;
+  #   type = "fcitx5";
+  #   fcitx5 = {
+  #     waylandFrontend = true;
+  #     addons = with pkgs; [ fcitx5-gtk fcitx5-configtool ];
+  #   };
+  # };
+  console.keyMap = "us";
 
 
   # don't touch this

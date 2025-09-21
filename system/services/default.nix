@@ -5,10 +5,10 @@ _: {
     dbus.implementation = "broker";
 
     # profile-sync-daemon
-    psd = {
-      enable = true;
-      resyncTimer = "10m";
-    };
+    # psd = {
+    #   enable = true;
+    #   resyncTimer = "10m";
+    # };
     irqbalance.enable = true;
     mullvad-vpn.enable = true;
   };

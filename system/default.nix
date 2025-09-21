@@ -14,6 +14,7 @@ let
     ./services
     ./services/ananicy.nix
     # ./services/greetd.nix
+    ./services/qbittorrent.nix
     ./services/sddm.nix
     ./services/pipewire.nix
   ];
