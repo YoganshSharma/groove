@@ -54,7 +54,13 @@ in {
     "Mod+Shift+Alt+S".action = screenshot-window;
     "Mod+Shift+S".action.screenshot = {show-pointer = false;};
     "Mod+D".action = quickshellIpc "spotlight" "toggle" ;
-    "Mod+Return".action = spawn "${pkgs.ghostty}/bin/ghostty";
+    "Mod+B".action = quickshellIpc "bar" "toggle" ;
+    "Mod+Return".action = spawn "${lib.getExe pkgs.ghostty}";
+    "Mod+W".action = spawn "${lib.getExe pkgs.firefox}";
+    "Mod+Shift+B" = { 
+      repeat = false;
+      action = spawn-sh "${lib.getExe pkgs.bash} -c \"pkill quickshell && dms run\"";
+     };
 
     "Mod+Q".action = close-window;
     "Mod+S".action = switch-preset-column-width;
@@ -75,18 +81,18 @@ in {
     "Mod+8".action = focus-workspace 8;
     "Mod+9".action = focus-workspace 9;
 
-    "Mod+Ctrl+1".action.move-column-to-workspace = 1;
-    "Mod+Ctrl+2".action.move-column-to-workspace = 2;
-    "Mod+Ctrl+3".action.move-column-to-workspace = 3;
-    "Mod+Ctrl+4".action.move-column-to-workspace = 4;
-    "Mod+Ctrl+5".action.move-column-to-workspace = 5;
-    "Mod+Ctrl+6".action.move-column-to-workspace = 6;
-    "Mod+Ctrl+7".action.move-column-to-workspace = 7;
-    "Mod+Ctrl+8".action.move-column-to-workspace = 8;
-    "Mod+Ctrl+9".action.move-column-to-workspace = 9;
+    "Mod+Shift+1".action.move-column-to-workspace = 1;
+    "Mod+Shift+2".action.move-column-to-workspace = 2;
+    "Mod+Shift+3".action.move-column-to-workspace = 3;
+    "Mod+Shift+4".action.move-column-to-workspace = 4;
+    "Mod+Shift+5".action.move-column-to-workspace = 5;
+    "Mod+Shift+6".action.move-column-to-workspace = 6;
+    "Mod+Shift+7".action.move-column-to-workspace = 7;
+    "Mod+Shift+8".action.move-column-to-workspace = 8;
+    "Mod+Shift+9".action.move-column-to-workspace = 9;
     "Mod+Shift+Space".action = fullscreen-window;
     "Mod+Space".action = toggle-window-floating;
-    "Mod+W".action = toggle-column-tabbed-display;
+    "Mod+T".action = toggle-column-tabbed-display;
 
     "Mod+Comma".action = consume-window-into-column;
     "Mod+Period".action = expel-window-from-column;
