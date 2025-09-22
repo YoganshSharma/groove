@@ -1,3 +1,3 @@
 {
-  serices.activitywatch.enable = true;
+  services.activitywatch.enable = true;
 }

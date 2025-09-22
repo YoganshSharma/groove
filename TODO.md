@@ -11,6 +11,7 @@ evaluation warning: The option `services.logind.powerKey' defined in `/nix/store
 - [X] Rename `services.logind.lidSwitchExternalPower` to `services.logind.settings.Login.HandleLidSwitchExternalPower`.
 - [X] Rename `services.logind.lidSwitch` to `services.logind.settings.Login.HandleLidSwitch`.
 - [X] Rename `services.logind.powerKey` to `services.logind.settings.Login.HandlePowerKey`.
+https://github.com/ActivityWatch/awesome-activitywatch?tab=readme-ov-file
 
 - Calendar configure
 https://github.com/kpbaks/nixos-config/blob/a99096c1775cd0c4eb7f56c1a1b74235868ef05a/home/calendar.nix#L11

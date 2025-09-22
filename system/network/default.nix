@@ -9,8 +9,17 @@
       wifi.powersave = true;
     };
     firewall = {
-      allowedTCPPorts = [4444];
-    };
+        enable = true;
+        allowedTCPPorts = [4444];
+
+        ## For KDE Connect
+        allowedTCPPortRanges = [
+          { from = 1714; to = 1764; }
+        ];
+        allowedUDPPortRanges = [
+          { from = 1714; to = 1764; }
+        ];
+      };
   };
 
   services = {
