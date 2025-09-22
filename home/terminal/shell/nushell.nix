@@ -17,7 +17,7 @@
         conf = builtins.toJSON {
           show_banner = false;
           edit_mode = "vi";
-          buffer_editor = "hx";
+          buffer_editor = "nvim";
 
           completions = {
             algorithm = "substring";
@@ -202,8 +202,8 @@
         NIXPKGS_ALLOW_UNFREE = "1";
         NIXPKGS_ALLOW_INSECURE = "1";
         SHELL = "${pkgs.nushell}/bin/nu";
-        EDITOR = "hx";
-        VISUAL = "hx";
+        EDITOR = "nvim";
+        VISUAL = "nvim";
         CARAPACE_BRIDGES = "inshellisense,carapace,zsh,fish,bash";
       };
       extraEnv = "$env.CARAPACE_BRIDGES = 'inshellisense,carapace,zsh,fish,bash'";
