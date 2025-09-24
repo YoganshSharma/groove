@@ -12,11 +12,11 @@
 
     # media services
     # ../../services/media/playerctl.nix
-    ../../services/media/mpv.nix
 
     # software
     ../../software
     ../../software/wayland
+    ../../software/media/mpv.nix
 
     # system services
     ../../services/system/gpg-agent.nix

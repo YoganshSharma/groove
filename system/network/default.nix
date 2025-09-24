@@ -9,7 +9,7 @@
       wifi.powersave = true;
     };
     firewall = {
-        enable = true;
+        enable = false;
         allowedTCPPorts = [4444];
 
         ## For KDE Connect

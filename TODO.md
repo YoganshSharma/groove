@@ -16,3 +16,4 @@ https://github.com/ActivityWatch/awesome-activitywatch?tab=readme-ov-file
 - Calendar configure
 https://github.com/kpbaks/nixos-config/blob/a99096c1775cd0c4eb7f56c1a1b74235868ef05a/home/calendar.nix#L11
 
+- mpv copyToClipboard script custom pkg

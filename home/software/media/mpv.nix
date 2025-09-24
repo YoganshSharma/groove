@@ -5,8 +5,8 @@
     config = {
       volume = 100;
       volume-max = 200;
-      osd-bar = "no";
-      osc = "no";
+      # osd-bar = "no";
+      # osc = "no";
       ytdl-format = "bestvideo[height<=720][fps<=30]+bestaudio";
       screenshot-directory = "~/Pictures/mpv";
       cache = true;
@@ -23,6 +23,7 @@
       pkgs.mpvScripts.thumbfast
       pkgs.mpvScripts.mpris
       pkgs.mpvScripts.webtorrent-mpv-hook
+      pkgs.mpvScripts.quality-menu
     ];
 
   };
