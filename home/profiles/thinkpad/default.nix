@@ -12,6 +12,7 @@
 
     # media services
     # ../../services/media/playerctl.nix
+    ../../services/media/mpv.nix
 
     # software
     ../../software
