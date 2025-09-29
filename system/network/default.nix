@@ -8,6 +8,12 @@
       dns = "systemd-resolved";
       wifi.powersave = true;
     };
+    stevenBlackHosts = {
+      enable = true;
+      enableIPv6 = true;
+      blockGambling = true;
+      blockPorn = true;
+    };
     firewall = {
         enable = false;
         allowedTCPPorts = [4444];

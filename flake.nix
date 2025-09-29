@@ -64,6 +64,12 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    hosts = {
+      url = "github:StevenBlack/hosts";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     kixvim = {
       url = "github:YoganshSharma/kixvim";
       # inputs.nixpkgs.follows = "nixpkgs"; #refer last para of https://nix.dev/manual/nix/2.24/command-ref/new-cli/nix3-flake.html#flake-inputs and https://github.com/YoganshSharma/kixvim/blob/ab853ff47eb3c9608bdb272340da47943eaa4184/README.md#snowflake-nixos-with-flakes using overlays instead of this

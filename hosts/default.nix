@@ -2,6 +2,7 @@
   self,
   inputs,
   homeImports,
+  hosts,
   ...
 }: {
   flake.nixosConfigurations = let
@@ -33,6 +34,7 @@
               extraSpecialArgs = specialArgs;
             };
           }
+          hosts.nixosModule
 
           inputs.agenix.nixosModules.default
           inputs.chaotic.nixosModules.default
