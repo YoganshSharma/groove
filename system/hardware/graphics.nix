@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   # graphics drivers / HW accel
+  hardware.opengl.enable = true;
   hardware.graphics = {
     enable = true;
     extraPackages = with pkgs; [

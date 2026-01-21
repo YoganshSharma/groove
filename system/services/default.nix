@@ -3,6 +3,7 @@ _: {
     printing.enable = true;
 
     dbus.implementation = "broker";
+    dbus.enable = true;
 
     # profile-sync-daemon
     # psd = {

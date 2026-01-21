@@ -65,7 +65,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hosts = {
+    stevenhosts = {
       url = "github:StevenBlack/hosts";
       inputs.nixpkgs.follows = "nixpkgs";
     };

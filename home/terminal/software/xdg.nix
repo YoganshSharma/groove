@@ -63,6 +63,7 @@
       "text/x-rust" = ["org.gnome.TextEditor"];
       "text/x-nix" = ["org.gnome.TextEditor"];
       "x-scheme-handler/chrome" = ["chromium-browser"];
+      "inode/directory" = [ "org.gnome.Nautilus.desktop" ];
     }
     // image
     // video

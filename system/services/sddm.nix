@@ -40,6 +40,11 @@
 in {
   environment.systemPackages = [sddm-theme pkgs.bibata-cursors];
 
+  services.xserver.desktopManager.xfce.enable = true;
+  services.xserver.enable = true;
+  services.xserver.videoDrivers = [ "intel" ];   # or "nvidia" / "amdgpu"
+  services.xserver.libinput.enable = true;       # touchpad support
+
   services.displayManager = {
     autoLogin = {
       enable = true;

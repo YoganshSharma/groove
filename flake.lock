@@ -1061,11 +1061,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1758006913,
-        "narHash": "sha256-lU00BAdiKAhm96M6o0AzBdZY6+bBSfB2a0zm4xJYl/U=",
+        "lastModified": 1759128992,
+        "narHash": "sha256-crjxt1g3zc3OtmE4xfbFouiDwAxqUmRfpTtfnkkJ8/0=",
         "ref": "refs/heads/master",
-        "rev": "49646e4407fce5925920b178872ddd9f8e495218",
-        "revCount": 673,
+        "rev": "1d94144976252a922e03e4c0fbb921ee8b8bb079",
+        "revCount": 682,
         "type": "git",
         "url": "https://git.outfoxxed.me/quickshell/quickshell"
       },
@@ -1093,6 +1093,7 @@
         "quickshell": "quickshell",
         "sessionizer": "sessionizer",
         "silentSDDM": "silentSDDM",
+        "stevenhosts": "stevenhosts",
         "stylix": "stylix",
         "systems": "systems_4",
         "zen-browser": "zen-browser"
@@ -1154,6 +1155,26 @@
       "original": {
         "owner": "uiriansan",
         "repo": "SilentSDDM",
+        "type": "github"
+      }
+    },
+    "stevenhosts": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1758991453,
+        "narHash": "sha256-TxPkUd457pTkEgIVG6UwkK2EWxvl816th7pDYwN9P4Q=",
+        "owner": "StevenBlack",
+        "repo": "hosts",
+        "rev": "122b248d725bb2f25e0b250de0b263c0c4a30ea4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "StevenBlack",
+        "repo": "hosts",
         "type": "github"
       }
     },
