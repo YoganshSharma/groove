@@ -6,10 +6,15 @@
       # make Xbox Series X controller work
       General = {
         Experimental = true;
-        FastConnectable = true;
+        FastConnectable = false;
         powerOnBoot = true;
         JustWorksRepairing = "always";
         Privacy = "device";
+
+
+        # TEMPORARY WORKAROUND FOR BLUETOOTH AUDIO ISSUES
+        Disable = "Headset";
+        ControllerMode = "bredr";
       };
     };
   };

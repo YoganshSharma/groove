@@ -1,19 +1,16 @@
 {pkgs, ...}: {
   # graphics drivers / HW accel
-  hardware.opengl.enable = true;
   hardware.graphics = {
     enable = true;
     extraPackages = with pkgs; [
       libva
-      vaapiVdpau
+      libva-vdpau-driver
       libvdpau-va-gl
-      amdvlk
       mesa
     ];
     extraPackages32 = with pkgs.pkgsi686Linux; [
-      vaapiVdpau
+      libva-vdpau-driver
       libvdpau-va-gl
-      amdvlk
     ];
   };
 }

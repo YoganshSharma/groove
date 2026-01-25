@@ -15,8 +15,8 @@
       blockPorn = true;
     };
     firewall = {
-        enable = false;
-        allowedTCPPorts = [4444];
+        enable = true;
+        allowedTCPPorts = [4444, 59100, 59010]; # 4444 for Syncthing GUI, 59010 and 59100 for Audio Relay
 
         ## For KDE Connect
         allowedTCPPortRanges = [
@@ -25,6 +25,7 @@
         allowedUDPPortRanges = [
           { from = 1714; to = 1764; }
         ];
+
       };
   };
 
