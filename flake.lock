@@ -1057,11 +1057,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1748017996,
-        "narHash": "sha256-uNWNIZzU0pF4BUIq25OSC3XoSPPSkulNYUWlvDeAcL8=",
+        "lastModified": 1771954011,
+        "narHash": "sha256-U2F8Dm/lcq+A6DdKgi1AdClQwxIDwk6Dk2Jpp1B5YjY=",
         "owner": "YoganshSharma",
         "repo": "tmux-sessionizer",
-        "rev": "3a33a5b03d145655b413c0f338ed234b83163164",
+        "rev": "8f543ca7a5ecab02b5aa65130c6743f807ea0eb3",
         "type": "github"
       },
       "original": {

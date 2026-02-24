@@ -14,7 +14,7 @@
 
       "github.com" = {
         hostname = "ssh.github.com";
-        port = 443;
+        port = 22;
         user = "git";
         identityFile = "~/.ssh/id_ed25519";
       };
