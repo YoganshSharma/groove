@@ -40,10 +40,10 @@
 in {
   environment.systemPackages = [sddm-theme pkgs.bibata-cursors];
 
-  services.xserver.desktopManager.xfce.enable = true;
+  services.xserver.desktopManager.xfce.enable = false; # xfce4-notifyd conflicts with dms's notification server
   services.xserver.enable = true;
   services.xserver.videoDrivers = [ "intel" ];   # or "nvidia" / "amdgpu"
-  services.xserver.libinput.enable = true;       # touchpad support
+  services.libinput.enable = true;       # touchpad support
 
   services.displayManager = {
     autoLogin = {

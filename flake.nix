@@ -1,27 +1,38 @@
 {
   description = "Yogansh Configuration NixOs.";
 
-  outputs = inputs:
-    inputs.flake-parts.lib.mkFlake {inherit inputs;} {
-      systems = ["x86_64-linux"];
+  outputs =
+    inputs:
+    inputs.flake-parts.lib.mkFlake { inherit inputs; } {
+      systems = [ "x86_64-linux" ];
 
-      imports = [./home/profiles ./hosts ./pkgs];
+      imports = [
+        ./home/profiles
+        ./hosts
+        ./pkgs
+      ];
 
-      perSystem = {
-        config,
-        pkgs,
-        ...
-      }: {
-        devShells = {
-          default = pkgs.mkShell {
-            packages = [pkgs.alejandra pkgs.git config.packages.repl];
-            name = "nixland";
-            DIRENV_LOG_FORMAT = "";
+      perSystem =
+        {
+          config,
+          pkgs,
+          ...
+        }:
+        {
+          devShells = {
+            default = pkgs.mkShell {
+              packages = [
+                pkgs.alejandra
+                pkgs.git
+                config.packages.repl
+              ];
+              name = "nixland";
+              DIRENV_LOG_FORMAT = "";
+            };
           };
+          # Nix Formatter
+          formatter = pkgs.alejandra;
         };
-        # Nix Formatter
-        formatter = pkgs.alejandra;
-      };
     };
 
   inputs = {
@@ -54,7 +65,7 @@
 
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
 
-    dankMaterialShell = {
+    dms = {
       url = "github:AvengeMedia/DankMaterialShell";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.quickshell.follows = "quickshell";
@@ -65,18 +76,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    stevenhosts = {
-      url = "github:StevenBlack/hosts";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     kixvim = {
       url = "github:YoganshSharma/kixvim";
       # inputs.nixpkgs.follows = "nixpkgs"; #refer last para of https://nix.dev/manual/nix/2.24/command-ref/new-cli/nix3-flake.html#flake-inputs and https://github.com/YoganshSharma/kixvim/blob/ab853ff47eb3c9608bdb272340da47943eaa4184/README.md#snowflake-nixos-with-flakes using overlays instead of this
 
     };
-
-
 
     mynixpkgs.url = "github:linuxmobile/mynixpkgs";
 
@@ -89,10 +93,6 @@
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-
-
-
 
     nix-index-db = {
       url = "github:Mic92/nix-index-database";
@@ -112,7 +112,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    sessionizer.url = "github:YoganshSharma/tmux-sessionizer";
+    sessionizer = {
+      url = "github:YoganshSharma/tmux-sessionizer";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     stylix = {
       url = "github:danth/stylix";

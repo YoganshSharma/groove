@@ -4,7 +4,7 @@
 }: {
   programs.tmux = {
     enable = true;
-    shell = "${pkgs.nushell}/bin/nushell";
+    shell = "${pkgs.fish}/bin/fish";
     escapeTime = 0;
     baseIndex = 1;
     keyMode = "vi";

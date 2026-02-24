@@ -7,7 +7,7 @@
 in {
   programs.dankMaterialShell = {
     enable = true;
-    enableSpawn = true;
+    niri.enableSpawn = true;
     enableCalendarEvents = true;
 
     quickshell.package = quickshell;

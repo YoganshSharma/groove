@@ -51,7 +51,8 @@ in {
     "Mod+M".action = quickshellIpc "processlist" "toggle" ;
 
     "Print".action.screenshot-screen = {write-to-disk = true;};
-    "Mod+Shift+Alt+S".action = screenshot-window;
+    "Mod+Shift+Alt+S".action.screenshot-window = {write-to-disk = true;};
+    # "Mod+Shift+Alt+S".action = screenshot-window;
     "Mod+Shift+S".action.screenshot = {show-pointer = false;};
     "Mod+D".action = quickshellIpc "spotlight" "toggle" ;
     "Mod+B".action = quickshellIpc "bar" "toggle" ;
@@ -59,7 +60,8 @@ in {
     "Mod+W".action = spawn "${lib.getExe pkgs.firefox}";
     "Mod+Shift+B" = { 
       repeat = false;
-      action = spawn-sh "${lib.getExe pkgs.bash} -c \"pkill quickshell && dms run\"";
+      # action = spawn-sh "${lib.getExe pkgs.bash} -c \"pkill quickshell && dms run\"";
+      action = spawn-sh "${lib.getExe pkgs.bash} -c \"dms restart\"";
      };
 
     "Mod+Q".action = close-window;

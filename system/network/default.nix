@@ -8,15 +8,9 @@
       dns = "systemd-resolved";
       wifi.powersave = true;
     };
-    stevenBlackHosts = {
-      enable = true;
-      enableIPv6 = true;
-      blockGambling = true;
-      blockPorn = true;
-    };
     firewall = {
         enable = true;
-        allowedTCPPorts = [4444, 59100, 59010]; # 4444 for Syncthing GUI, 59010 and 59100 for Audio Relay
+        allowedTCPPorts = [4444 59100 59010]; # 4444 for Syncthing GUI, 59010 and 59100 for Audio Relay
 
         ## For KDE Connect
         allowedTCPPortRanges = [

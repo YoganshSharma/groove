@@ -38,10 +38,10 @@ pkgs,
 
 
   # don't touch this
-  system.stateVersion = lib.mkDefault "24.05";
+  system.stateVersion = lib.mkDefault "25.11";
   system = {
     switch.enable = true;
-    rebuild.enableNg = true;
+    # rebuild.enableNg = true;
   };
 
     # set your time zone.

@@ -15,7 +15,7 @@
   home.packages = with pkgs; [
     # messaging
     telegram-desktop
-    vesktop
+    # vesktop #in home/default
     discord
 
     # misc

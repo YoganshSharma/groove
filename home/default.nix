@@ -7,13 +7,16 @@
   imports = [
     ./terminal
     inputs.nix-index-db.homeModules.nix-index
-    inputs.dankMaterialShell.homeModules.dankMaterialShell
+    # inputs.dms.homeModules.dankMaterialShell
+    inputs.dms.homeModules.niri
+    inputs.dms.homeModules.default
+
     inputs.stylix.homeModules.stylix
   ];
   home = {
     username = "yogansh";
     homeDirectory = "/home/yogansh";
-    stateVersion = "24.05";
+    stateVersion = "25.11";
   };
 
   # disable manuals as nmd fails to build often

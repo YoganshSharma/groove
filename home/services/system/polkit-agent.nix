@@ -1,4 +1,5 @@
 {pkgs, ...}: {
+  # systemd.user.services.niri-flake-polkit.enable = false;
   systemd.user.services.polkit-gnome-authentication-agent-1 = {
     Unit.Description = "polkit-gnome-authentication-agent-1";
 

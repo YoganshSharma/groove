@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   users.users.yogansh = {
     isNormalUser = true;
-    shell = pkgs.nushell;
+    shell = pkgs.fish;
     extraGroups = [
       "adbusers"
       "input"

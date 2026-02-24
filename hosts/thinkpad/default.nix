@@ -26,14 +26,17 @@
       "randomize_kstack_offset=on" # Randomize kernel stack offset on each syscall (mitigates some exploits)
       "vsyscall=none" # Disable vsyscall (removes legacy syscall interface, improves security)
       "slab_nomerge" # Disable merging of similar SLAB caches (hardens against some heap attacks)
-      "module.sig_enforce=1" # Only allow loading kernel modules with valid signatures (prevents unsigned modules)
-      "lockdown=confidentiality" # Enable kernel lockdown in confidentiality mode (restricts kernel access even for root)
+      # "module.sig_enforce=1" # Only allow loading kernel modules with valid signatures (prevents unsigned modules)
+      # "lockdown=confidentiality" # Enable kernel lockdown in confidentiality mode (restricts kernel access even for root)
+      "lockdown=integrity" # TEMPORARILY
       "page_poison=1" # Fill freed memory pages with poison value (helps detect use-after-free bugs)
       "page_alloc.shuffle=1" # Randomize page allocator order (mitigates some memory corruption attacks)
       "sysrq_always_enabled=0" # Disable magic SysRq key entirely (prevents low-level system commands)
       "rootflags=noatime" # Mount root filesystem with noatime (improves performance, disables file access time updates)
       "lsm=landlock,lockdown,yama,integrity,apparmor,bpf,tomoyo,selinux" # Enable and order Linux Security Modules (stacked LSMs for security)
+      "lsm=landlock,yama,apparmor,bpf" # TEMPORARILY
       "fbcon=nodefer" # Do not defer kernel messages to framebuffer console (shows messages immediately)
+      "usbcore.autosuspend=-1" # Disable USB autosuspend globally; prevents Intel BT firmware from stalling
     ];
     kernel.sysctl = {
       "vm.swappiness" = 10; # Lower tendency to swap (default is 60)
@@ -114,6 +117,10 @@
     ];
 
     extraModprobeConfig = ''
+      options btusb enable_autosuspend=0
+      options btusb reset=1
+      options btusb disable_scofix=Y
+
       options v4l2loopback exclusive_caps=1 card_label="OBS Virtual Output"
     '';
   };
