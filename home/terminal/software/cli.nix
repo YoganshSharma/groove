@@ -56,7 +56,6 @@
 
   programs = {
     eza.enable = true;
-    ssh.enable = true;
     dircolors = {
       enable = true;
       # enableNushellIntegration = true;

@@ -6,6 +6,7 @@
     ./cli.nix
     ./git.nix
     ./gpg.nix
+    ./ssh.nix
     ./lazygit.nix
     ./nix.nix
     ./skim.nix
