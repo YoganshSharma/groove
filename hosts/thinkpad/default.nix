@@ -11,6 +11,12 @@
   # boot.initrd.luks.devices."luks-34a67564-6b1d-4c48-94db-4320d2169afb".device =
   #   "/dev/disk/by-uuid/34a67564-6b1d-4c48-94db-4320d2169afb";
 
+  # Build in RAM instead of SSD
+  boot.tmp.useTmpfs = true;
+  boot.tmp.tmpfsSize = "75%";
+
+  programs.ccache.enable = true;
+
   boot = {
     # load modules on boot
     kernelModules = ["amdgpu" "v4l2loopback" "i2c-dev" "efivarfs"];
@@ -33,7 +39,7 @@
       "page_alloc.shuffle=1" # Randomize page allocator order (mitigates some memory corruption attacks)
       "sysrq_always_enabled=0" # Disable magic SysRq key entirely (prevents low-level system commands)
       "rootflags=noatime" # Mount root filesystem with noatime (improves performance, disables file access time updates)
-      "lsm=landlock,lockdown,yama,integrity,apparmor,bpf,tomoyo,selinux" # Enable and order Linux Security Modules (stacked LSMs for security)
+      "lsm=landlock,lockdown,yama,apparmor,bpf,tomoyo" # Enable and order Linux Security Modules (stacked LSMs for security)
       "fbcon=nodefer" # Do not defer kernel messages to framebuffer console (shows messages immediately)
     ];
     kernel.sysctl = {
