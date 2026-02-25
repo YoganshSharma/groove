@@ -46,7 +46,6 @@
     ]
     ++ (with inputs.mynixpkgs.packages.${pkgs.system}; [
       opencode
-      toney
       bmm
       omm
       prs

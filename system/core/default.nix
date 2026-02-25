@@ -7,7 +7,7 @@ pkgs,
     ./security.nix
     ./users.nix
     ../nix
-    ../programs/nushell.nix
+    ../programs/shells.nix
   ];
 
   i18n = {

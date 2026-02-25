@@ -10,7 +10,7 @@
     # make HM-managed GTK stuff work
     dconf.enable = true;
     seahorse.enable = true;
-    adb.enable = true;
+    fish.enable = true;
   };
   # services.udev.packages = [pkgs.android-udev-rules];#  been removed due to being superseded by built-in systemd uaccess rules.
 }
