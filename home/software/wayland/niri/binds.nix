@@ -55,8 +55,12 @@ in {
     # "Mod+Shift+Alt+S".action = screenshot-window;
     "Mod+Shift+S".action.screenshot = {show-pointer = false;};
     "Mod+D".action = quickshellIpc "spotlight" "toggle" ;
-    "Mod+B".action = quickshellIpc "bar" "toggle" ;
+    "Mod+B".action = quickshellIpc "bar" "toggle" "index" "0";
     "Mod+Return".action = spawn "${lib.getExe pkgs.ghostty}";
+    "Mod+T".action = spawn-sh ''
+      ${lib.getExe pkgs.ghostty} -- \
+      tmux new-session -A -s home -c "$HOME"
+    '';
     "Mod+W".action = spawn "${lib.getExe pkgs.firefox}";
     "Mod+Shift+B" = { 
       repeat = false;
@@ -94,7 +98,7 @@ in {
     "Mod+Shift+9".action.move-column-to-workspace = 9;
     "Mod+Shift+Space".action = fullscreen-window;
     "Mod+Space".action = toggle-window-floating;
-    "Mod+T".action = toggle-column-tabbed-display;
+    "Mod+Shift+T".action = toggle-column-tabbed-display;
 
     "Mod+Comma".action = consume-window-into-column;
     "Mod+Period".action = expel-window-from-column;
