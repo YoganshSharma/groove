@@ -57,10 +57,7 @@ in {
     "Mod+D".action = quickshellIpc "spotlight" "toggle" ;
     "Mod+B".action = quickshellIpc "bar" "toggle" "index" "0";
     "Mod+Return".action = spawn "${lib.getExe pkgs.ghostty}";
-    "Mod+T".action = spawn-sh ''
-      ${lib.getExe pkgs.ghostty} -- \
-      tmux new-session -A -s home -c "$HOME"
-    '';
+    "Mod+T".action = spawn-sh '' ${lib.getExe pkgs.ghostty} -e tmux new-session -A -s home -c "$HOME" '';
     "Mod+W".action = spawn "${lib.getExe pkgs.firefox}";
     "Mod+Shift+B" = { 
       repeat = false;
@@ -106,9 +103,9 @@ in {
     "Mod+Tab".action = switch-focus-between-floating-and-tiling;
 
     "Mod+Minus".action = set-column-width "-10%";
-    "Mod+Plus".action = set-column-width "+10%";
+    "Mod+Equal".action = set-column-width "+10%";
     "Mod+Shift+Minus".action = set-window-height "-10%";
-    "Mod+Shift+Plus".action = set-window-height "+10%";
+    "Mod+Shift+Equal".action = set-window-height "+10%";
 
     "Mod+H".action = focus-column-left;
     "Mod+L".action = focus-column-right;

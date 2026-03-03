@@ -69,9 +69,11 @@
       starship.enable = true;
       vesktop.enable = true;
       yazi.enable = true;
-      fish.enable = true;
+      fish.enable = false;
       qt.enable = true;
       fcitx5.enable = true;
+      ghostty.enable = false;
+      dank-material-shell.enable = false;
     };
   };
   home.file.".face" = {

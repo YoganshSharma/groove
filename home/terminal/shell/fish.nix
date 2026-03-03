@@ -4,6 +4,9 @@
     carapace.enableFishIntegration = true;
     fish = {
       enable = true;
+      shellInit = ''
+        set -g fish_greeting
+      '';
       shellAbbrs = {
         blt = "bluetoothctl";
       };
