@@ -120,6 +120,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    stevenhosts = {
+      url = "github:StevenBlack/hosts"; # or a fork/mirror
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     stylix = {
       url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";

@@ -36,6 +36,18 @@
 
           inputs.agenix.nixosModules.default
           inputs.chaotic.nixosModules.default
+          inputs.stevenhosts.nixosModule
+        {
+          networking.stevenBlackHosts = {
+            enable = true;
+            # optionally:
+            enableIPv6 = true;
+            blockFakenews = true;
+            blockGambling = true;
+            blockPorn = true;
+            blockSocial = false;
+          };
+        }
         ];
     };
   };

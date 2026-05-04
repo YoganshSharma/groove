@@ -1,5 +1,5 @@
 # networking configuration
-{pkgs, ...}: {
+{pkgs, inputs, ...}: {
   networking = {
     # nameservers = ["1.1.1.1" "1.0.0.1"];
     nftables.enable = true;
@@ -35,9 +35,18 @@
       settings.Resolve.DNSOverTLS = "opportunistic";
       settings.Resolve.ResolveUnicastSingleLabel = "yes";
     };
+
+    unbound = {
+      enable = true;
+      settings.server.include = [
+        "${inputs.stevenhosts.packages.${pkgs.system}.unbound}/hosts"
+        # alternates are also available, e.g. /fakenews, /fakenews-gambling etc.
+      ];
+    };
+
   };
 
   # Don't wait for network startup
   systemd.services.NetworkManager-wait-online.serviceConfig.ExecStart = ["" "${pkgs.networkmanager}/bin/nm-online -q"];
-  environment.etc.hosts.enable = false;
+  environment.etc.hosts.enable = true;
 }
