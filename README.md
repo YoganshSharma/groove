@@ -165,6 +165,9 @@ home-manager switch --flake 'github:linuxmobile/kaku#linudev@aesthetic'
 
 ## 💐 <samp>ACKNOWLEDGEMENTS</samp>
 
+This project is primarily inspired by [linuxmobile/kaku](https://github.com/linuxmobile/kaku).
+
+
 |           |     | Inspiration and Resources                   |                            |     |
 | :-------: | :-: | :------------------------------------------ | :------------------------- | :-: |
 |           |  1  | [owl4ce](https://github.com/owl4ce)         |                            |     |
