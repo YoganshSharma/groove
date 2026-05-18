@@ -7,7 +7,7 @@
       General = {
         Experimental = true;
         FastConnectable = false;
-        powerOnBoot = true;
+        powerOnBoot = false; # I have changed it
         JustWorksRepairing = "always";
         Privacy = "device";
 
