@@ -17,3 +17,6 @@ https://github.com/ActivityWatch/awesome-activitywatch?tab=readme-ov-file
 https://github.com/kpbaks/nixos-config/blob/a99096c1775cd0c4eb7f56c1a1b74235868ef05a/home/calendar.nix#L11
 
 - mpv copyToClipboard script custom pkg
+
+
+- [ ] (sioyek:64323): GLib-GIO-ERROR **: 00:43:27.857: Settings schema 'org.gtk.Settings.FileChooser' is not installed

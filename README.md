@@ -35,23 +35,24 @@
   </picture>
 </a>
 
-- **Window Manager** • [Niri](https://github.com/YaLTeR/niri/)🎨 Scrolleable WM!
-- **Shell** • [Nu](https://www.nushell.sh/) 🐚 with
-  [starship](https://github.com/starship/starship) Cross Shell Platform!
-- **Terminal** • [Ghostty](https://ghostty.org/) 💻 A powerful Hyped term
-- **Panel** • [Astal](https://aylur.github.io/astal/) 🍧 Astal GTK-shell :3!
-- **Notify Daemon** • [Dunst](https://github.com/dunst-project/dunst) 🍃
-  Minimalist and functional!
-- **Launcher** • [AnyRun](https://github.com/anyrun-org/anyrun) 🚀 Fast AnyRunner!
-- **File Manager** • [Yazi](https://github.com/sxyazi/yazi) 🔖 Rustacean File
-  Manager!
-- **GUI Basic-IDE** • [Helix](https://docs.helix-editor.com/) ✴️ Rustacean vim
-  version!
-- **GTK Theme** • [GTK](https://github.com/linuxmobile/Colloid-gtk-theme) 🐾 My
-  Fork of colloid
-- **LockScreen** •
-  [Hyprlock](https://wiki.hyprland.org/Hypr-Ecosystem/hyprlock/) 🔒 hyprland
-  locker
+- **Window Manager** • [Niri](https://github.com/YaLTeR/niri/)🎨 Scrolleable WM! (UI managed by [DankMaterialShell](https://github.com/AvengeMedia/DankMaterialShell))
+- **Shells** • [NuShell](https://www.nushell.sh/) (with [Starship](https://github.com/starship/starship) prompt) for interactive sessions, [Quickshell](https://git.outfoxxed.me/quickshell/quickshell) for IPC commands, and [Fish](https://fishshell.com/) as the system shell.
+- **Terminal** • [Foot](https://codeberg.org/dnkl/foot) and [Ghostty](https://ghostty.org/) 💻
+- **Panel** • [DankMaterialShell](https://github.com/AvengeMedia/DankMaterialShell) 🍧 A Wayland shell integrating Niri and Quickshell!
+- **Launcher** • [AnyRun](https://github.com/Kirottu/anyrun)
+- **File Manager** • [Yazi](https://github.com/sxyazi/yazi) 🔖 Rustacean File Manager!
+- **Editors** • [Zed](https://zed.dev/) ⚡ (installed), and [Kixvim](https://github.com/YoganshSharma/kixvim) 📝 (installed).
+- **Theming & Styling** • [Stylix](https://github.com/danth/stylix) ✨ for comprehensive system theming (GTK, fonts, colors, etc.).
+
+**Browsers**
+- Firefox
+- Zen Browser
+
+**Utilities & Services**
+- **System**: `pipewire`, `sddm`, `greetd`, `tor`, `ananicy`, `qbittorrent`, `fwupd`, `kdeconnect`, `gnome-services`, `geoclue2`, `backlight`, `power`, `docker`, `gamemode`, `avahi`, `hypridle`, `gammastep`, `power-monitor`, `syncthing`, `gpg-agent`, `polkit-agent`, `activitywatch`
+- **CLI Tools**: `git`, `gh`, `lazygit`, `delta`, `tmux`, `sessionizer`, `zoxide`, `atuin`, `skim`, `nix-index-db`, `bat`, `bottom`, `cava`, `neofetch`, `fastfetch`, `yt-dlp`, `newsboat`, `mpv`, `playerctl`, `obs`
+- **Development**: `direnv`, `alejandra`, `deadnix`, `statix`, `nh`, `nodejs`, `pnpm`, `bun`, `biome`, `emmet-ls`, `marksman`, `nil`, `nixd`, `vscode-langservers-extracted`, `typescript-language-server`, `typescript`, `gopls`, `yaml-language-server`, `astro-language-server`
+- **Miscellaneous**: `sioyek`, `zathura`, `telegram-desktop`, `discord`, `vesktop`, `pciutils`, `colord`, `cliphist`, `ffmpegthumbnailer`, `imagemagick`, `inkscape`, `scrcpy`, `multiviewer-for-f1`, `swww`, `mods`
 
 ## 🌼 <samp>INSTALLATION (NixOS)</samp>
 
