@@ -110,6 +110,10 @@
       };
     };
 
+    nixos-hardware = {
+      url = "github:NixOS/nixos-hardware/master";
+    };
+
     quickshell = {
       url = "git+https://git.outfoxxed.me/quickshell/quickshell";
       inputs.nixpkgs.follows = "nixpkgs";

@@ -37,6 +37,7 @@
           inputs.agenix.nixosModules.default
           inputs.chaotic.nixosModules.default
           inputs.stevenhosts.nixosModule
+          inputs.nixos-hardware.nixosModules.lenovo-thinkpad-t480
         {
           networking.stevenBlackHosts = {
             enable = true;
