@@ -7,7 +7,7 @@
       volume-max = 200;
       # osd-bar = "no";
       # osc = "no";
-      ytdl-format = "bestvideo[height<=720][fps<=30]+bestaudio";
+      ytdl-format = "bestvideo*+bestaudio/best";
       screenshot-directory = "~/Pictures/mpv";
       cache = true;
       demuxer-max-bytes = "500M";
