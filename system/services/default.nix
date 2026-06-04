@@ -11,8 +11,8 @@
     #   resyncTimer = "10m";
     # };
     irqbalance.enable = true;
-    mullvad-vpn.enable = true;
-    mullvad-vpn.package = pkgs.mullvad-vpn;
+    # mullvad-vpn.enable = true;
+    # mullvad-vpn.package = pkgs.mullvad-vpn;
   };
 
   # Use in place of hypridle's before_sleep_cmd, since systemd does not wait for

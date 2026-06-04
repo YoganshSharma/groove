@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   services.tor = {
-    enable = true;
+    enable = false;
     settings = {
       # ClientTransportPlugin = "obfs4 exec ${pkgs.obfs4}/bin/lyrebird";
       ClientTransportPlugin = "meek exec ${pkgs.meek}/bin/meek-client";

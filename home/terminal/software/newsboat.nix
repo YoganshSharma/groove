@@ -411,6 +411,22 @@
           "rust"
         ];
       }
+      {
+        title = "George Hotz's";
+        url = "https://geohot.github.io//blog/feed.xml";
+        tags = [
+          "blog"
+          "tech"
+        ];
+      }
+      {
+        url = "https://www.gingerbill.org/article/index.xml";
+        tags = [
+          "blog"
+          "tech"
+          "zig"
+        ];
+      }
 
     ];
 
