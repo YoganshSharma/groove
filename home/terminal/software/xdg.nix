@@ -5,7 +5,7 @@
 }: let
   browser = ["firefox"];
   imageViewer = ["org.gnome.Loupe"];
-  videoPlayer = ["io.github.celluloid_player.Celluloid"];
+  videoPlayer = ["mpv"];
   audioPlayer = ["io.bassi.Amberol"];
 
   xdgAssociations = type: program: list:
@@ -63,7 +63,7 @@
       "text/x-rust" = ["org.gnome.TextEditor"];
       "text/x-nix" = ["org.gnome.TextEditor"];
       "x-scheme-handler/chrome" = ["chromium-browser"];
-      "inode/directory" = [ "org.gnome.Nautilus.desktop" ];
+      "inode/directory" = [ "org.gnome.Nautilus" ];
     }
     // image
     // video

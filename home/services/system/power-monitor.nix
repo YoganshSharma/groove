@@ -2,7 +2,8 @@
   pkgs,
   lib,
   ...
-}: let
+}:
+let
   script = pkgs.writeShellScript "power_monitor.sh" ''
     set -euo pipefail
 
@@ -72,13 +73,25 @@
 
     log "Starting power monitor"
     prev_profile=""
+    notified_low=false
 
     while true; do
       current_profile=$(get_power_profile)
+      current_capacity=$(cat "$BAT_CAP")
+      current_status=$(cat "$BAT_STATUS")
 
       if [[ "$prev_profile" != "$current_profile" ]]; then
         apply_profile "$current_profile"
         prev_profile=$current_profile
+      fi
+
+      if [[ "$current_status" == "Discharging" && "$current_capacity" -le $LOW_BAT_PERCENT ]]; then
+        if [[ "$notified_low" == false ]]; then
+          notify-send "Battery Low" "Battery level is at ''${current_capacity}%. Please plug in the charger."
+          notified_low=true
+        fi
+      else
+        notified_low=false
       fi
 
       if ! inotifywait -qq "$BAT_STATUS" "$BAT_CAP"; then
@@ -92,15 +105,17 @@
     coreutils
     power-profiles-daemon
     inotify-tools
+    libnotify
     gsettings-desktop-schemas
   ];
-in {
+in
+{
   # Power state monitor. Switches Power profiles based on charging state.
   systemd.user.services.power-monitor = {
     Unit = {
       Description = "Power Monitor";
-      After = ["power-profiles-daemon.service"];
-      Wants = ["power-profiles-daemon.service"];
+      After = [ "power-profiles-daemon.service" ];
+      Wants = [ "power-profiles-daemon.service" ];
     };
 
     Service = {
@@ -111,6 +126,6 @@ in {
       RestartSec = "5s";
     };
 
-    Install.WantedBy = ["default.target"];
+    Install.WantedBy = [ "default.target" ];
   };
 }
