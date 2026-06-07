@@ -26,7 +26,7 @@
         name = "yaml";
         auto-format = true;
         formatter = {
-          command = "${pkgs.nodePackages.prettier}/bin/prettier";
+          command = "${pkgs.prettier}/bin/prettier";
           args = ["--parser" "yaml"];
         };
         language-servers = ["yaml-language-server"];
@@ -35,7 +35,7 @@
         name = "astro";
         auto-format = true;
         formatter = {
-          command = "${pkgs.nodePackages.prettier}/bin/prettier";
+          command = "${pkgs.prettier}/bin/prettier";
           args = ["--parser" "astro"];
         };
         language-servers = ["astro-ls"];
@@ -88,7 +88,7 @@
         name = "markdown";
         auto-format = true;
         formatter = {
-          command = "${pkgs.nodePackages.prettier}/bin/prettier";
+          command = "${pkgs.prettier}/bin/prettier";
           args = ["--parser" "markdown"];
         };
         language-servers = ["marksman"];

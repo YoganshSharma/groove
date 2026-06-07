@@ -8,7 +8,7 @@
     nil
     nixd
     vscode-langservers-extracted
-    nodePackages.typescript-language-server
+    typescript-language-server
     typescript
     gopls
     yaml-language-server

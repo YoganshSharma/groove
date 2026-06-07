@@ -7,13 +7,13 @@ in {
     ./shell/starship.nix
     ./shell/fish.nix
     ./shell/nushell.nix
+    ./emulators/foot.nix
   ];
 
   home.sessionVariables = {
     # clean up ~
     LESSHISTFILE = "${cache}/less/history";
     LESSKEY = "${conf}/less/lesskey";
-
     XAUTHORITY = "$XDG_RUNTIME_DIR/Xauthority";
 
     EDITOR = "nvim";

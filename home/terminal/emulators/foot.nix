@@ -9,7 +9,7 @@
     enable = true;
     settings = {
       main = {
-        font = "ZedMono Nerd Font Mono:size=8:fontfeatures=calt:fontfeatures=dlig:fontfeatures=liga";
+        font = "Adwaita Mono:size=15:fontfeatures=calt:fontfeatures=dlig:fontfeatures=liga";
         dpi-aware = "yes";
         horizontal-letter-offset = 0;
         vertical-letter-offset = 0;
@@ -17,7 +17,7 @@
         term = "xterm-256color";
         selection-target = "clipboard";
         include = "${config.xdg.configHome}/foot/theme.ini";
-        shell = "${pkgs.zellij}/bin/zellij";
+        shell = "${pkgs.fish}/bin/fish";
       };
       desktop-notifications.command = "${lib.getExe pkgs.libnotify} -a \${app-id} -i \${app-id} \${title} \${body}";
       scrollback = {
@@ -39,7 +39,10 @@
         font-monospace-warn = "no";
         sixel = "yes";
       };
-      colors = {
+      colors-dark = {
+        alpha = 1.0;
+      };
+      colors-light = {
         alpha = 1.0;
       };
     };

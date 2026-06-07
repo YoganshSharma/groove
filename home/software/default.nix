@@ -6,7 +6,7 @@
 }: {
   imports = [
     #./browsers/chromium.nix
-    ./browsers/zen.nix
+    #./browsers/zen.nix
     ./gtk.nix
     ./media
     ./documents
@@ -26,7 +26,7 @@
     ffmpegthumbnailer
     imagemagick
     nodejs
-    nodePackages.pnpm
+    pnpm
     bun
 
     fastfetch
