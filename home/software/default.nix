@@ -10,6 +10,7 @@
     ./gtk.nix
     ./media
     ./documents
+    ./wayland
   ];
 
   home.packages = with pkgs; [

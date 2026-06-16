@@ -17,6 +17,7 @@ let
     ./services/qbittorrent.nix
     ./services/sddm.nix
     ./services/pipewire.nix
+    ./services/waydroid.nix
 
     ./services/tor.nix
   ];
