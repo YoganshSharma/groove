@@ -10,7 +10,7 @@
           poll_time = 2;
         };
       };
-      aw-watcher-window = {
+      aw-watcher-window-wayland = {
         package = pkgs.aw-watcher-window-wayland;
         settings = {
           poll_time = 1;
