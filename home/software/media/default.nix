@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   imports = [
     ./obs.nix
-    ./rnnoise.nix
+    # ./rnnoise.nix # temporarily disabled
     ./mpv.nix
   ];
 

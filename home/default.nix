@@ -16,7 +16,7 @@
   home = {
     username = "yogansh";
     homeDirectory = "/home/yogansh";
-    stateVersion = "25.11";
+    stateVersion = "26.05";
   };
 
   # disable manuals as nmd fails to build often

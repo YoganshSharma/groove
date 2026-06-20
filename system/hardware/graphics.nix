@@ -1,10 +1,6 @@
 {pkgs, ...}: {
   # graphics drivers / HW accel
   hardware = {
-    amdgpu.amdvlk = {
-      enable = true;
-      support32Bit.enable = true;
-    };
     graphics = {
       enable = true;
       enable32Bit = true;

@@ -52,7 +52,7 @@
     scrcpy
     multiviewer-for-f1
 
-    swww
+    awww
     ghostty
     mods
 

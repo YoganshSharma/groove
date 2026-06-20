@@ -16,24 +16,27 @@
   boot.tmp.tmpfsSize = "75%";
 
   programs.ccache.enable = true;
+  chaotic = {
+    nyx.overlay.enable = true;
+  };
 
   boot = {
     # load modules on boot
-    kernelModules = ["amdgpu" "v4l2loopback" "i2c-dev" "efivarfs"];
-    kernelPackages = lib.mkForce pkgs.linuxPackages_cachyos;
-    extraModulePackages = with config.boot.kernelPackages; [v4l2loopback];
+    kernelModules = ["v4l2loopback" "i2c-dev" "efivarfs"];
+    # kernelPackages = lib.mkForce pkgs.linuxPackages_cachyos;
+    # extraModulePackages = with config.boot.kernelPackages; [v4l2loopback]; # i think cachy does that
     kernelParams = [
-      "amd_pstate=active" # Enable AMD P-state CPU scaling driver
-      "amd_iommu" # Enable AMD IOMMU (for device passthrough/virtualization)
+      # "amd_pstate=active" # Enable AMD P-state CPU scaling driver
+      # "amd_iommu" # Enable AMD IOMMU (for device passthrough/virtualization)
       "mitigations=off" # Disable CPU security mitigations (improves performance, reduces security)
-      "ideapad_laptop.allow_v4_dytc=Y" # Allow Lenovo IdeaPad v4 Dynamic Thermal Control
+      
       "nvme_core.default_ps_max_latency_us=0" # Set NVMe power state latency to minimum (max performance)
 
       "randomize_kstack_offset=on" # Randomize kernel stack offset on each syscall (mitigates some exploits)
       "vsyscall=none" # Disable vsyscall (removes legacy syscall interface, improves security)
       "slab_nomerge" # Disable merging of similar SLAB caches (hardens against some heap attacks)
       "module.sig_enforce=1" # Only allow loading kernel modules with valid signatures (prevents unsigned modules)
-      "lockdown=confidentiality" # Enable kernel lockdown in confidentiality mode (restricts kernel access even for root)
+      # "lockdown=confidentiality" # Enable kernel lockdown in confidentiality mode (restricts kernel access even for root)
       "lockdown=integrity" # TEMPORARILY
       "page_poison=1" # Fill freed memory pages with poison value (helps detect use-after-free bugs)
       "page_alloc.shuffle=1" # Randomize page allocator order (mitigates some memory corruption attacks)
@@ -88,12 +91,12 @@
       "affs" # Amiga Fast File System
       "befs" # "Be File System"
       "bfs" # BFS, used by SCO UnixWare OS for the /stand slice
-      "cifs" # Common Internet File System
+      "cifs" # Common Internet File System / used by windows/samba, NAS
       "cramfs" # compressed ROM/RAM file system
       "efs" # Extent File System
-      "erofs" # Enhanced Read-Only File System
+      # "erofs" # Enhanced Read-Only File System
       "exofs" # EXtended Object File System
-      "f2fs" # Flash-Friendly File System
+      # "f2fs" # Flash-Friendly File System
       "freevxfs" # Veritas filesystem driver
       "gfs2" # Global File System 2
       "hfs" # Hierarchical File System (Macintosh)
@@ -110,14 +113,14 @@
       "omfs" # Optimized MPEG Filesystem
       "qnx4" # Extent-based file system used by the QNX4 OS.
       "qnx6" # Extent-based file system used by the QNX6 OS.
-      "squashfs" # compressed read-only file system (used by live CDs)
+      # "squashfs" # compressed read-only file system (used by live CDs)
       "sysv" # implements all of Xenix FS, SystemV/386 FS and Coherent FS.
       "udf" # https://docs.kernel.org/5.15/filesystems/udf.html
       "vivid" # Virtual Video Test Driver (unnecessary)
 
       # Disable Thunderbolt and FireWire to prevent DMA attacks
       "firewire-core"
-      "thunderbolt"
+      # "thunderbolt"
     ];
 
     extraModprobeConfig = ''

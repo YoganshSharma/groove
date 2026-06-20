@@ -11,7 +11,11 @@
     initrd = {
       systemd.enable = true;
     };
-    supportedFilesystems = ["ntfs"];
+    supportedFilesystems = {
+      btrfs = true;
+      ntfs = true;
+    };
+
 
     # use latest kernel
     kernelPackages = pkgs.linuxPackages_latest;

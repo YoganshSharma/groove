@@ -9,11 +9,21 @@
       git = {
         commit.signOff = true;
         parseEmoji = true;
+        overrideGpg = true;
+        pagers = [
+          {
+            colorArg = "always";
+            pager = "delta --dark --paging=never";
+          }
+        ];
       };
       gui = {
         theme = {
-          activeBorderColor = ["magenta" "bold"];
-          inactiveBorderColor = ["black"];
+          activeBorderColor = [
+            "magenta"
+            "bold"
+          ];
+          inactiveBorderColor = [ "black" ];
         };
         showListFooter = false;
         showRandomTip = false;

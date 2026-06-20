@@ -8,6 +8,7 @@ pkgs,
     ./users.nix
     ../nix
     ../programs/shells.nix
+    # ../programs/steam.nix
   ];
 
   i18n = {
