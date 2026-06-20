@@ -13,6 +13,21 @@ _: let
       draw-border-with-background = false;
     }
     {
+      matches = [{app-id = "firefox";}];
+      open-on-workspace = "web";
+    }
+    {
+      matches = [
+        {app-id = "ghostty";}
+        {app-id = "foot";}
+      ];
+      open-on-workspace = "term";
+    }
+    {
+      matches = [{app-id = "mpv";}];
+      open-on-workspace = "media";
+    }
+    {
       matches = [
         {is-floating = true;}
       ];

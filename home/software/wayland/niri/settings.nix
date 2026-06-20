@@ -25,6 +25,11 @@ in {
         QT_QPA_PLATFORMTHEME_QT6 = "gtk3";
 
       };
+      workspaces = {
+        "1" = {name = "web";};
+        "2" = {name = "term";};
+        "3" = {name = "media";};
+      };
       spawn-at-startup = [
         {command = ["${pkgs.wl-clipboard}/bin/wl-paste" "--watch" "cliphist" "store"];}
         {command = ["${pkgs.wl-clipboard}/bin/wl-paste" "--type text" "--watch" "cliphist" "store"];}
