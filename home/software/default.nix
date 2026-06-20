@@ -56,7 +56,7 @@
     ghostty
     mods
 
-    inputs.kixvim.packages.${system}.default
-    inputs.sessionizer.packages.${system}.default
+    inputs.kixvim.packages.${pkgs.stdenv.hostPlatform.system}.default
+    inputs.sessionizer.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 }

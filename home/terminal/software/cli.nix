@@ -44,7 +44,7 @@
       nix-search-tv
       television
     ]
-    ++ (with inputs.mynixpkgs.packages.${pkgs.system}; [
+    ++ (with inputs.mynixpkgs.packages.${pkgs.stdenv.hostPlatform.system}; [
       opencode
       bmm
       omm

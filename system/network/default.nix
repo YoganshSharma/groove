@@ -39,7 +39,7 @@
     unbound = {
       enable = true;
       settings.server.include = [
-        "${inputs.stevenhosts.packages.${pkgs.system}.unbound}/hosts"
+        "${inputs.stevenhosts.packages.${pkgs.stdenv.hostPlatform.system}.unbound}/hosts"
         # alternates are also available, e.g. /fakenews, /fakenews-gambling etc.
       ];
     };
