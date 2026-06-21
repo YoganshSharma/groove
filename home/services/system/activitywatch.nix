@@ -1,5 +1,16 @@
 { pkgs, ... }:
-{
+let
+  watcherService = {
+    unit = {
+      After = [ "graphical-session.target" ];
+      BindsTo = [ "graphical-session.target" ];
+    };
+    service = {
+      Restart = "on-failure";
+      RestartSec = "5s";
+    };
+  };
+in {
   services.activitywatch = {
     enable = true;
     watchers = {
@@ -18,5 +29,10 @@
         };
       };
     };
+  };
+
+  systemd.user.services = {
+    "activitywatch-watcher-aw-watcher-afk" = watcherService;
+    "activitywatch-watcher-aw-watcher-window-wayland" = watcherService;
   };
 }
