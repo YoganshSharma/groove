@@ -1,7 +1,23 @@
 {
   pkgs,
+  lib,
   ...
-}: {
+}: let
+  aw-watcher-tmux = pkgs.tmuxPlugins.mkTmuxPlugin {
+    pluginName = "aw-watcher-tmux";
+    version = "1.0.0";
+    rtpFilePath = "aw-watcher-tmux.tmux";
+    src = pkgs.fetchFromGitHub {
+      owner = "akohlbecker";
+      repo = "aw-watcher-tmux";
+      rev = "efaa7610add52bd2b39cd98d0e8e082b1e126487";
+      sha256 = "sha256-L6YLyEOmb+vdz6bJdB0m5gONPpBp2fV3i9PiLSNrZNM=";
+    };
+    meta = {
+      homepage = "https://github.com/akohlbecker/aw-watcher-tmux";
+    };
+  };
+in {
   programs.tmux = {
     enable = true;
     shell = "${pkgs.fish}/bin/fish";
@@ -28,10 +44,7 @@
       nord
       better-mouse-mode
       urlview
-      #      {
-      #	plugin = pkgs.tmuxPlugins.rose-pine;
-      #	extraConfig = "set -g @rose_pine_variant 'main'"; # Options are 'main', 'moon' or 'dawn'"
-      #      }
+      aw-watcher-tmux
     ];
   };
 }
