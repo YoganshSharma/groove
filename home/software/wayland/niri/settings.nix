@@ -34,7 +34,8 @@ in {
         {command = ["${pkgs.wl-clipboard}/bin/wl-paste" "--watch" "cliphist" "store"];}
         {command = ["${pkgs.wl-clipboard}/bin/wl-paste" "--type text" "--watch" "cliphist" "store"];}
 
-        {sh = "sleep 10 && ${pkgs.activitywatch}/bin/aw-qt" ;} # TODO better way to do this?
+        {sh = "sleep 4 && ${pkgs.activitywatch}/bin/aw-qt" ;}
+        {sh = "sleep 4 && systemctl --user start activitywatch-watcher-aw-watcher-afk.service activitywatch-watcher-aw-watcher-window-wayland.service" ;}
         # {command = ["qs" "-c" "DankMaterialShell"];}
         {command = [(lib.getExe pkgs.xwayland-satellite)];}
 
