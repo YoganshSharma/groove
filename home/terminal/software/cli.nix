@@ -43,14 +43,14 @@
       zfxtop
       nix-search-tv
       television
+      bmm
     ]
     ++ (with inputs.mynixpkgs.packages.${pkgs.stdenv.hostPlatform.system}; [
-      opencode
-      bmm
-      omm
-      prs
-      dfft
-      crush
+      #opencode
+      # omm
+      #prs
+      #dfft
+      #crush
     ]);
 
   programs = {

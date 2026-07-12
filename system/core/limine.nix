@@ -11,7 +11,7 @@
       efiSupport = true;
       style.wallpapers = [pkgs.nixos-artwork.wallpapers.simple-dark-gray-bootloader.gnomeFilePath];
       maxGenerations = 10;
-      secureBoot.enable = false;
+      secureBoot.enable = true;
     };
     systemd-boot.enable = lib.mkForce false;
   };

@@ -7,7 +7,7 @@
   extraSpecialArgs = {inherit inputs self;};
 
   homeImports = {
-    "yogansh@thinkpad" = [
+    "yogansh@ten" = [
       ../.
       ./thinkpad
     ];
@@ -21,8 +21,8 @@ in {
 
   flake = {
     homeConfiguration = {
-      "yogansh@thinkpad" = homeManagerConfiguration {
-        modules = homeImports."yogansh@thinkpad";
+      "yogansh@ten" = homeManagerConfiguration {
+        modules = homeImports."yogansh@ten";
         inherit pkgs extraSpecialArgs;
       };
     };
