@@ -2,7 +2,8 @@
   pkgs,
   lib,
   ...
-}: let
+}:
+let
   aw-watcher-tmux = pkgs.tmuxPlugins.mkTmuxPlugin {
     pluginName = "aw-watcher-tmux";
     version = "1.0.0";
@@ -17,7 +18,8 @@
       homepage = "https://github.com/akohlbecker/aw-watcher-tmux";
     };
   };
-in {
+in
+{
   programs.tmux = {
     enable = true;
     shell = "${pkgs.fish}/bin/fish";
@@ -27,24 +29,26 @@ in {
     mouse = true;
     newSession = true;
     extraConfig = ''
-          bind -n M-u attach-session -t . -c '#{pane_current_path}' \; display-message "Changed current working directory to #{pane_current_path}"
-          bind-key U run-shell '
-        dir=$(tmux display -p "#{pane_current_path}")
-        i=1
-        while tmux has-session -t "new-session-$i" 2>/dev/null; do
-          i=$((i + 1))
-        done
-        tmux new-session -ds "new-session-$i" -c "$dir"
-        tmux switch-client -t "new-session-$i"
-      '
+      # Bind Alt+u to update the current session's root directory to the active pane's path
+      bind -n M-u attach-session -t . -c '#{pane_current_path}' \; display-message "Changed current working directory to #{pane_current_path}"
 
+      # Bind Shift+u to spawn and switch to a new isolated session in the current path
+      bind-key U run-shell " \
+        dir=\$(tmux display -p '#{pane_current_path}') && \
+        i=1 && \
+        while tmux has-session -t \"new-session-\$i\" 2>/dev/null; do \
+          i=\$((i + 1)); \
+        done && \
+        tmux new-session -ds \"new-session-\$i\" -c \"\$dir\" && \
+        tmux switch-client -t \"new-session-\$i\" \
+      "
     '';
     plugins = with pkgs.tmuxPlugins; [
       sensible
       nord
       better-mouse-mode
       urlview
-      aw-watcher-tmux
+      # aw-watcher-tmux # this disables the extraConfig keybinds for some reason
     ];
   };
 }
