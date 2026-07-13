@@ -11,6 +11,8 @@
     ./media
     ./documents
     ./wayland
+    ./fcitx5.nix
+    ./qt.nix
   ];
 
   home.packages = with pkgs; [
@@ -25,12 +27,17 @@
     colord
     cliphist
     ffmpegthumbnailer
+    ffmpeg
     imagemagick
+    fzf
     nodejs
     pnpm
     bun
 
     fastfetch
+
+    # backup for niri
+    alacritty
 
     # gnome
     amberol
@@ -55,6 +62,8 @@
     awww
     ghostty
     mods
+    calibre
+    anki
 
     inputs.kixvim.packages.${pkgs.stdenv.hostPlatform.system}.default
     inputs.sessionizer.packages.${pkgs.stdenv.hostPlatform.system}.default

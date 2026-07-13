@@ -59,20 +59,22 @@
       };
     };
 
-    base16Scheme = "${inputs.self}/home/shared/colors/gruvbox-dark-hard.yml";
+    base16Scheme = "${inputs.self}/home/shared/colors/charm.yaml";
 
     targets = {
+      anki.enable = true;
       bat.enable = true;
+      dank-material-shell.enable = false;
+      fcitx5.enable = false;
+      fish.enable = false;
+      fzf.enable = true;
+      ghostty.enable = false;
       nixos-icons.enable = true;
       nushell.enable = true;
+      qt.enable = false;
       starship.enable = true;
       vesktop.enable = true;
       yazi.enable = true;
-      fish.enable = false;
-      qt.enable = true;
-      fcitx5.enable = true;
-      ghostty.enable = false;
-      dank-material-shell.enable = false;
     };
   };
   home.file.".face" = {

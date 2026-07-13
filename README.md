@@ -163,6 +163,24 @@ home-manager switch --flake 'github:linuxmobile/kaku#linudev@aesthetic'
 
 ## 🍀 <samp>KEY BINDINGS</samp>
 
+### Launchers
+
+| Key | Action |
+|---|---|
+| `Mod + Return` | Terminal (ghostty) |
+| `Mod + T` | Terminal with tmux home session |
+| `Mod + W` | Firefox |
+| `Mod + A` | Anki |
+| `Mod + D` | Spotlight launcher |
+| `Mod + P` | Power menu |
+| `Mod + N` | Notifications |
+| `Mod + V` | Clipboard manager |
+| `Mod + U` | Settings panel |
+| `Mod + M` | Process list |
+| `Mod + B` | Toggle bar |
+
+> Full DMS IPC reference: [`dms-ipc.md`](./dms-ipc.md)
+
 ## 💐 <samp>ACKNOWLEDGEMENTS</samp>
 
 This project is primarily inspired by [linuxmobile/kaku](https://github.com/linuxmobile/kaku).

@@ -95,6 +95,22 @@
         "type": "github"
       }
     },
+    "base46": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1780820761,
+        "narHash": "sha256-6kK8q2dmmW3RO9FQmlcYN6Yyhl6fXE5ey1l8PWRVCfc=",
+        "owner": "AvengeMedia",
+        "repo": "base46",
+        "rev": "cb8a1257bbc2640f6e7415a01219b34d3efd1494",
+        "type": "github"
+      },
+      "original": {
+        "owner": "AvengeMedia",
+        "repo": "base46",
+        "type": "github"
+      }
+    },
     "chaotic": {
       "inputs": {
         "flake-schemas": "flake-schemas",
@@ -628,17 +644,18 @@
     },
     "kixvim": {
       "inputs": {
+        "base46": "base46",
         "flake-utils": "flake-utils_2",
         "gen-luarc": "gen-luarc",
         "nixneovimplugins": "nixneovimplugins",
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1779906074,
-        "narHash": "sha256-d452naTjTeU+GqznjGOE6KWVALkaYUXGAGECxT64QX0=",
+        "lastModified": 1783959916,
+        "narHash": "sha256-VsQHp51Lx5Hc87KpMR5f45XANSsBNI7XkoiGYByRQqE=",
         "owner": "YoganshSharma",
         "repo": "kixvim",
-        "rev": "3fdea4522dba84bf80e165f87cbbc06f78558550",
+        "rev": "0fde8e598528521b3e5aa437edf02fd2563bc96b",
         "type": "github"
       },
       "original": {

@@ -83,6 +83,7 @@ in {
 
   system.activationScripts.copyFiles = {
     text = ''
+      mkdir -p /var/lib/AccountsService/icons/
       cp -r ${./sddm/faces}/* /var/lib/AccountsService/icons/
     '';
   };

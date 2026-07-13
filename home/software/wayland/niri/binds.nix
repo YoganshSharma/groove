@@ -59,6 +59,9 @@ in {
     "Mod+Return".action = spawn "${lib.getExe pkgs.ghostty}";
     "Mod+T".action = spawn-sh '' ${lib.getExe pkgs.ghostty} -e tmux new-session -A -s home -c "$HOME" '';
     "Mod+W".action = spawn "${lib.getExe pkgs.firefox}";
+    "Mod+A".action = spawn "${lib.getExe pkgs.anki}";
+    "Mod+P".action = quickshellIpc "powermenu" "toggle";
+    "Mod+N".action = quickshellIpc "notifications" "toggle";
     "Mod+Shift+B" = { 
       repeat = false;
       # action = spawn-sh "${lib.getExe pkgs.bash} -c \"pkill quickshell && dms run\"";
