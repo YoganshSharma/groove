@@ -7,9 +7,8 @@
   imports = [
     ./terminal
     inputs.nix-index-db.homeModules.nix-index
-    # inputs.dms.homeModules.dankMaterialShell
+    inputs.dms.homeModules.dank-material-shell
     inputs.dms.homeModules.niri
-    inputs.dms.homeModules.default
 
     inputs.stylix.homeModules.stylix
   ];
