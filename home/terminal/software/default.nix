@@ -17,5 +17,6 @@
     ./xdg.nix
     ./yazi
     ./zoxide.nix
+    ./zk.nix
   ];
 }

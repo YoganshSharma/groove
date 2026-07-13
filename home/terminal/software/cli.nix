@@ -28,8 +28,8 @@
     xh # curl oxidized
     dysk
     tealdeer
+    pulsemixer
 
-    zk
     tesseract
     discordo
     fum
