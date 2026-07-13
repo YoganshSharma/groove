@@ -10,7 +10,7 @@
     lfs.enable = true;
 
     signing = {
-      # key = "481EFFCF2C7B8C7B"; # TODO: Add your GPG key ID here
+      key = "552DACBEFDD9DA8C"; # TODO: Add your GPG key ID here
       signByDefault = true;
     };
 
