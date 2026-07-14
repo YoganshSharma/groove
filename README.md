@@ -49,7 +49,7 @@
 - Zen Browser
 
 **Utilities & Services**
-- **System**: `pipewire`, `sddm`, `greetd`, `tor`, `ananicy`, `qbittorrent`, `fwupd`, `kdeconnect`, `gnome-services`, `geoclue2`, `backlight`, `power`, `docker`, `gamemode`, `avahi`, `hypridle`, `gammastep`, `power-monitor`, `syncthing`, `gpg-agent`, `polkit-agent`, `activitywatch`
+- **System**: `pipewire`, `sddm`, `greetd`, `tor`, `ananicy`, `qbittorrent`, `fwupd`, `kdeconnect`, `gnome-services`, `geoclue2`, `backlight`, `power`, `docker`, `gamemode`, `avahi`, `hypridle`, `gammastep`, `power-monitor`, `syncthing`, `gpg-agent`, `polkit-agent`
 - **CLI Tools**: `git`, `gh`, `lazygit`, `delta`, `tmux`, `sessionizer`, `zoxide`, `atuin`, `skim`, `nix-index-db`, `bat`, `bottom`, `cava`, `neofetch`, `fastfetch`, `yt-dlp`, `newsboat`, `mpv`, `playerctl`, `obs`
 - **Development**: `direnv`, `alejandra`, `deadnix`, `statix`, `nh`, `nodejs`, `pnpm`, `bun`, `biome`, `emmet-ls`, `marksman`, `nil`, `nixd`, `vscode-langservers-extracted`, `typescript-language-server`, `typescript`, `gopls`, `yaml-language-server`, `astro-language-server`
 - **Miscellaneous**: `sioyek`, `zathura`, `telegram-desktop`, `discord`, `vesktop`, `pciutils`, `colord`, `cliphist`, `ffmpegthumbnailer`, `imagemagick`, `inkscape`, `scrcpy`, `multiviewer-for-f1`, `swww`, `mods`

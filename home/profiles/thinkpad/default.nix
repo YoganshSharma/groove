@@ -5,7 +5,7 @@
     ../../editors/zed
 
     # services
-    ../../services/system/activitywatch.nix
+    # ../../services/system/activitywatch.nix
     # ../../services/wayland/hypridle.nix
     # ../../services/wayland/gammastep.nix
     # ../../services/wayland/quickshell.nix

@@ -57,8 +57,8 @@ in {
     "Mod+Shift+S".action.screenshot = {show-pointer = false;};
     "Mod+D".action = quickshellIpc "spotlight" "toggle" ;
     "Mod+B".action = quickshellIpc "bar" "toggle" "index" "0";
-    "Mod+Return".action = spawn "${lib.getExe pkgs.ghostty}";
-    "Mod+T".action = spawn-sh '' ${lib.getExe pkgs.ghostty} -e tmux new-session -A -s home -c "$HOME" '';
+    "Mod+Return".action = spawn "${pkgs.foot}/bin/footclient";
+    "Mod+T".action = spawn-sh '' ${pkgs.foot}/bin/footclient -e tmux new-session -A -s home -c "$HOME" '';
     "Mod+W".action = spawn "${lib.getExe pkgs.firefox}";
     "Mod+A".action = spawn "${lib.getExe pkgs.anki}";
     "Mod+P".action = quickshellIpc "powermenu" "toggle";
