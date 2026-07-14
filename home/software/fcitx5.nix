@@ -63,7 +63,7 @@
         };
         addons.classicui = {
           globalSection = {
-            Theme = "default";
+            # Theme = "default";
             VerticalLayout = false;
           };
         };

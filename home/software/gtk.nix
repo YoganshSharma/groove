@@ -17,13 +17,13 @@
 
     gtk2.configLocation = "${config.xdg.configHome}/gtk-2.0/gtkrc";
 
-    iconTheme = {
-      name = "WhiteSur";
-      package = pkgs.whitesur-icon-theme.override {
-        boldPanelIcons = true;
-        alternativeIcons = true;
-      };
-    };
+    # iconTheme = {
+    #   name = "WhiteSur";
+    #   package = pkgs.whitesur-icon-theme.override {
+    #     boldPanelIcons = true;
+    #     alternativeIcons = true;
+    #   };
+    # };
   };
   xdg.configFile = {
     "gtk-4.0/gtk.css".enable = lib.mkForce false;
@@ -33,6 +33,6 @@
   };
 
   home.sessionVariables = {
-    XDG_ICON_DIR = "${pkgs.whitesur-icon-theme}/share/icons/WhiteSur";
+    # XDG_ICON_DIR = "${pkgs.whitesur-icon-theme}/share/icons/WhiteSur";
   };
 }

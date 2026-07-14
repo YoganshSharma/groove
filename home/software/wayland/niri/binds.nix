@@ -48,7 +48,8 @@ in {
     "Ctrl+Alt+L".action = quickshellIpc "lock" "lock" ;
     "Mod+V".action = quickshellIpc "clipboard" "toggle" ;
     "Mod+U".action = quickshellIpc "settings" "toggle" ;
-    "Mod+M".action = quickshellIpc "processlist" "toggle" ;
+    "Mod+M".action = quickshellIpc "tmux" "toggle" ;
+    "Mod+Shift+M".action = quickshellIpc "processlist" "toggle" ;
 
     "Print".action.screenshot-screen = {write-to-disk = true;};
     "Mod+Shift+Alt+S".action.screenshot-window = {write-to-disk = true;};

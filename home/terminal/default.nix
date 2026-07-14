@@ -8,6 +8,7 @@ in {
     ./shell/fish.nix
     ./shell/nushell.nix
     ./emulators/foot.nix
+    ./emulators/ghostty.nix
   ];
 
   home.sessionVariables = {

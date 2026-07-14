@@ -2,14 +2,19 @@
   pkgs,
   inputs,
   ...
-}: let
+}:
+let
   quickshell = inputs.quickshell.packages.${pkgs.stdenv.hostPlatform.system}.default;
-in {
+in
+{
   programs.dank-material-shell = {
     enable = true;
     niri.enableSpawn = true;
     enableCalendarEvents = false; # khal compilation fails https://gist.github.com/YoganshSharma/8ac68a8f0b6b4f835bacc5cf072164b1
 
     quickshell.package = quickshell;
+    settings = {
+      runDmsMatugenTemplates = false;
+    };
   };
 }

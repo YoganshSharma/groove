@@ -10,6 +10,7 @@
     inputs.dms.homeModules.dank-material-shell
     inputs.dms.homeModules.niri
 
+    inputs.nixcord.homeModules.nixcord
     inputs.stylix.homeModules.stylix
   ];
   home = {
@@ -50,7 +51,7 @@
 
       monospace = {
         package = pkgs.nerd-fonts.geist-mono;
-        name = "Geist Nerd Font Mono";
+        name = "GeistMono Nerd Font Mono";
       };
 
       emoji = {
@@ -62,19 +63,34 @@
     base16Scheme = "${inputs.self}/home/shared/colors/charm.yaml";
 
     targets = {
+      alacritty.enable = true;
       anki.enable = true;
       bat.enable = true;
-      dank-material-shell.enable = false;
-      fcitx5.enable = false;
-      fish.enable = false;
+      btop.enable = true;
+      dank-material-shell.enable = true;
+      nixcord.enable = true;
+      fcitx5.enable = true;
+      feh.enable = true;
+      # firefox.enable = true;  # see the docs, TODO make firefox declarative
+      fish.enable = true;
+      foot.enable = true;
       fzf.enable = true;
-      ghostty.enable = false;
+      ghostty.enable = true;
+      gtk.enable = true;
+      mpv.enable = true;
+      niri.enable = true;
       nixos-icons.enable = true;
       nushell.enable = true;
-      qt.enable = false;
+      opencode.enable = true;
+      qt.enable = true;
+      sioyek.enable = true;
       starship.enable = true;
+      tmux.enable = true;
       vesktop.enable = true;
+      vscode.enable = true;
       yazi.enable = true;
+      zathura.enable = true;
+      zed.enable = true;
     };
   };
   home.file.".face" = {

@@ -9,14 +9,14 @@
     enable = true;
     settings = {
       main = {
-        font = "Adwaita Mono:size=15:fontfeatures=calt:fontfeatures=dlig:fontfeatures=liga";
-        dpi-aware = "yes";
+        # font = "Adwaita Mono:size=15:fontfeatures=calt:fontfeatures=dlig:fontfeatures=liga";
+        # dpi-aware = "yes";
         horizontal-letter-offset = 0;
         vertical-letter-offset = 0;
         pad = "15x6center";
         term = "xterm-256color";
         selection-target = "clipboard";
-        include = "${config.xdg.configHome}/foot/theme.ini";
+        # include = "${config.xdg.configHome}/foot/dank-colors.ini"; # or theme.ini if you want matugen dms
         shell = "${pkgs.fish}/bin/fish";
       };
       desktop-notifications.command = "${lib.getExe pkgs.libnotify} -a \${app-id} -i \${app-id} \${title} \${body}";

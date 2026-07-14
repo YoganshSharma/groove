@@ -20,7 +20,6 @@
       extensions = with inputs.firefox-addons.packages.${pkgs.stdenv.hostPlatform.system}; [
         ublock-origin
         bitwarden
-        sidebery
       ];
       search.force = true;
       search.engines = {

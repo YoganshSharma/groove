@@ -10,6 +10,8 @@
     nyx.overlay.enable = true;
   };
 
+  environment.systemPackages = [ pkgs.asusctl ];
+
   boot = {
     # load modules on boot
     kernelModules = ["v4l2loopback" "i2c-dev" "efivarfs"];
@@ -128,5 +130,14 @@
     fstrim.enable = true;
     scx.enable = true;
     scx.scheduler = "scx_rusty";
+
+    asusd = {
+      enable = true;
+      asusdConfig.text = ''
+        (
+            charge_control_end_threshold: 66,
+        )
+      '';
+    };
   };
 }

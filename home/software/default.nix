@@ -13,13 +13,14 @@
     ./wayland
     ./fcitx5.nix
     ./qt.nix
+    ./social/discord
   ];
 
   home.packages = with pkgs; [
     # messaging
     telegram-desktop
     # vesktop #in home/default
-    discord
+    # discord
 
     # misc
     pciutils
@@ -60,7 +61,6 @@
     multiviewer-for-f1
 
     awww
-    ghostty
     mods
     calibre
     anki
