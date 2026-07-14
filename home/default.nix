@@ -68,6 +68,7 @@
       bat.enable = true;
       btop.enable = true;
       dank-material-shell.enable = true;
+      kde.enable = true;
       nixcord.enable = true;
       fcitx5.enable = true;
       feh.enable = true;

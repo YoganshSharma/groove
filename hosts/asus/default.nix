@@ -121,7 +121,7 @@
     '';
   };
 
-  networking.hostName = "thinkpad";
+  networking.hostName = "tengoku";
 
   security.tpm2.enable = true;
 

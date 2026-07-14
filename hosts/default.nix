@@ -66,7 +66,7 @@
           {
             home-manager = {
               users.yogansh.imports =
-                homeImports."yogansh@ten";
+                homeImports."yogansh@tengoku";
               extraSpecialArgs = specialArgs;
             };
           }
